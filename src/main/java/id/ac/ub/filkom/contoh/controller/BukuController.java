@@ -34,4 +34,10 @@ public class BukuController {
         bukuService.tambahBuku(idBuku, judul, stok);
         return "redirect:/buku";     // pola Post-Redirect-Get
     }
+    
+    
+    @GetMapping("/buku/tambah")
+    public String formTambah() {
+        return "tambah-buku";        // -> templates/tambah-buku.html
+    }
 }

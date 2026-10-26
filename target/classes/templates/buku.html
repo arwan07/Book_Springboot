@@ -5,12 +5,10 @@
     <title>Daftar Buku</title>
 </head>
 <body>
+    
 <h1>Daftar Buku</h1>
 
-<form th:action="@{/buku}" method="get">
-    <input name="kata" th:value="${kata}" placeholder="Cari judul">
-    <button type="submit">Cari</button>
-</form>
+
 
 <table border="1">
     <tr><th>ID</th><th>Judul</th><th>Stok</th></tr>
@@ -21,12 +19,9 @@
     </tr>
 </table>
 
-<h2>Tambah Buku</h2>
-<form th:action="@{/buku}" method="post">
-    <input name="idBuku" placeholder="ID" required>
-    <input name="judul" placeholder="Judul" required>
-    <input name="stok" type="number" min="0" value="1">
-    <button type="submit">Simpan</button>
-</form>
+
+<h2>
+<a th:href="@{/buku/tambah}"><h2>Tambah Buku</h2></a>
+<a th:href="@{/anggota}">Lihat Anggota</a>
 </body>
 </html>
